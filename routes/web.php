@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\TrashPositionController;
+use App\Http\Controllers\TrashTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-Route::get('/position', [PositionController::class,'show'])->name('position.show');
+Route::get('/position', [PositionController::class,'index'])->name('position.index');
+Route::get('/trashPosition', [TrashPositionController::class, 'index'])->name('trashPosition.index');
+Route::get('/trashType', [TrashTypeController::class, 'index'])->name('trashType.index');
